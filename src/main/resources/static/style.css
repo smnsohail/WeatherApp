@@ -1,0 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../images/bg_image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Adjusted to allow vertical stacking of containers */
+    align-items: center;
+    justify-content: flex-start; /* Moved app to top for better spacing */
+    padding-top: 5vh;
+}
+
+#app {
+    background-color: rgba(0, 96, 112, 0.65);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 12px 12px rgba(0, 0, 0, 0.7);
+    width: 45vw;
+}
+
+#resultContainer { /* New styles for the result container */
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 50vw;
+    text-align: center;
+    color: white;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.7);
+    display: none; /* Hidden initially */
+}
+
+#heading {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00aaff;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #007acc;
+}
