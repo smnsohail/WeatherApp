@@ -11,9 +11,9 @@ body {
     background-position: center;
     height: 100vh;
     display: flex;
-    flex-direction: column; /* Adjusted to allow vertical stacking of containers */
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Moved app to top for better spacing */
+    justify-content: flex-start;
     padding-top: 5vh;
 }
 
@@ -23,19 +23,19 @@ body {
     border-radius: 15px;
     text-align: center;
     box-shadow: 12px 12px rgba(0, 0, 0, 0.7);
-    width: 45vw;
+    width: 45vw; /* Consistent width */
 }
 
-#resultContainer { /* New styles for the result container */
+#resultContainer { /* Updated container styling */
     margin-top: 20px;
     padding: 20px;
     border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 50vw;
-    text-align: center;
+    background-color: rgba(0, 96, 112, 0.85); /* Darker teal for visibility */
+    width: 45vw; /* Same width as the main container */
+    text-align: left; /* Left-aligned text for readability */
     color: white;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.7);
-    display: none; /* Hidden initially */
+    display: none; /* Initially hidden */
 }
 
 #heading {
