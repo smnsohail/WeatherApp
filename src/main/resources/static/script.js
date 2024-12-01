@@ -17,12 +17,15 @@ async function getWeather() {
         }
 
         const data = await response.json();
+
         const resultContainer = document.getElementById("resultContainer");
         resultContainer.style.display = "block"; // Make container visible
+
+        // Update with all data, including temperature
         document.getElementById("weatherResult").innerHTML = `
-            <h2>${data.cityName}</h2>
-            <p>Weather Condition : <b>${data.description}</b></p>
-            <p>Temperature: ${data.temperature} °C</p>
+            City: <strong>${data.cityName}</strong><br>
+            Weather Condition: <strong>${data.description}</strong><br>
+            Temperature: <strong>${data.temperature} °C</strong>
         `;
     } catch (error) {
         const resultContainer = document.getElementById("resultContainer");
