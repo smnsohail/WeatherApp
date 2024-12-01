@@ -21,7 +21,7 @@ async function getWeather() {
         resultContainer.style.display = "block"; // Make container visible
         document.getElementById("weatherResult").innerHTML = `
             <h2>${data.cityName}</h2>
-            <p>${data.description}</p>
+            <p>Weather Condition : <b>${data.description}</b></p>
             <p>Temperature: ${data.temperature} °C</p>
         `;
     } catch (error) {

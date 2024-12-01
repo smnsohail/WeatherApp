@@ -19,20 +19,26 @@ public class WeatherService {
                                                         // from the JSON response.
         String url = String.format("%s?q=%s&appid=%s&units=metric", BASE_URL, city, API_KEY);
 
-        Map<String, Object> response = restTemplate.getForObject(url, Map.class); //Explain why
+        Map<String, Object> response = restTemplate.getForObject(url, Map.class); // Sends an HTTP GET request to the
+                                                                                  // constructed URL and parses the JSON
+                                                                                  // response into a Map. Why Map? The
+                                                                                  // API returns a nested JSON response.
+                                                                                  // Using a Map makes it easier to
+                                                                                  // extract key-value pairs.
+
+                                                                                  
+        // CREATING INSTANCE OF MODEL CLASS (WEARTHERDATA CLASS)
 
         WeatherData weatherData = new WeatherData();
         weatherData.setCityName(response.get("name").toString());
 
-        //Get temperature info
-         Map<String, Object> main = (Map<String, Object>) response.get("main");
-         weatherData.setTemperature(Double.parseDouble(main.get("temp").toString()));
+        // Get temperature info
+        Map<String, Object> main = (Map<String, Object>) response.get("main");
+        weatherData.setTemperature(Double.parseDouble(main.get("temp").toString()));
 
-         // Get weather description
-         List<Map<String, Object>> weatherArray = (List<Map<String, Object>>) response.get("weather");
-         weatherData.setDescription(weatherArray.get(0).get("description").toString());
-
-
+        // Get weather description
+        List<Map<String, Object>> weatherArray = (List<Map<String, Object>>) response.get("weather");
+        weatherData.setDescription(weatherArray.get(0).get("description").toString());
 
         return weatherData;
     }
