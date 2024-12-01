@@ -23,9 +23,9 @@ async function getWeather() {
 
         // Update with all data, including temperature
         document.getElementById("weatherResult").innerHTML = `
-            City: <strong>${data.cityName}</strong><br>
-            Weather Condition: <strong>${data.description}</strong><br>
-            Temperature: <strong>${data.temperature} °C</strong>
+            <b>City</b>: <strong>${data.cityName}</strong><br>
+            <b>Weather Condition</b>: <strong>${data.description}</strong><br>
+            <b>Temperature</b>: <strong>${data.temperature} °C</strong>
         `;
     } catch (error) {
         const resultContainer = document.getElementById("resultContainer");
