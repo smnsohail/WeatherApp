@@ -13,35 +13,37 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding-top: 5vh;
+    justify-content: center;
 }
 
 #app {
-    background-color: rgba(0, 96, 112, 0.65);
-    padding: 30px;
+    background-color: #006774;
+    padding: 3%;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 12px 12px rgba(0, 0, 0, 0.7);
-    width: 45vw; /* Consistent width */
+    box-shadow: 12px 12px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 600px;
+    color: #C5D9D7;
+    margin-bottom: 20px;
 }
 
-#resultContainer { /* Updated container styling */
-    margin-top: 20px;
-    padding: 20px;
+#resultContainer { 
+    padding: 3%;
     border-radius: 15px;
-    background-color: rgba(0, 96, 112, 0.85); /* Darker teal for visibility */
-    width: 45vw; /* Same width as the main container */
-    text-align: left; /* Left-aligned text for readability */
-    color: white;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.7);
-    display: none; /* Initially hidden */
+    background-color: #004F59;
+    width: 90%;
+    max-width: 500px;
+    text-align: center; 
+    color: #C5D9D7;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+    display: none; 
 }
 
 #heading {
-    font-size: 2em;
-    color: white;
-    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #C5D9D7;
+    margin-bottom: 15px;
 }
 
 input {
@@ -49,21 +51,50 @@ input {
     margin: 10px 0;
     border: none;
     border-radius: 5px;
-    width: 80%;
-    font-size: 1em;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #C5D9D7;
+    color: #004F59;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 10px 15px;
     margin-top: 10px;
     border: none;
     border-radius: 5px;
     background-color: #00aaff;
     color: white;
-    font-size: 1em;
+    font-size: 1rem;
     cursor: pointer;
 }
 
 button:hover {
     background-color: #007acc;
+}
+
+#weatherResult {
+    margin-top: 10px;
+    line-height: 1.6em; 
+    font-size: 1.1rem;
+    color: #C5D9D7;
+}
+
+@media (min-width: 768px) {
+    #app, #resultContainer {
+        width: 60%;
+    }
+
+    #heading {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    #app, #resultContainer {
+        width: 40%;
+    }
 }
